@@ -9,4 +9,4 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update
 sudo apt install docker-ce -y
 sudo apt update
-sudp apt install docker-compose-plugin -y
+sudo apt install docker-compose-plugin -y
