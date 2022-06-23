@@ -37,7 +37,7 @@ services:
     networks:
       - inception
     volumes:
-      - wordpress_volume:/var/www/wordpress
+      - wordpress_v:/var/www/wordpress
     depends_on:
       - wordpress
     restart: always
