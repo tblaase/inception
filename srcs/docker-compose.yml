@@ -28,6 +28,20 @@ services:
       - mariadb
     restart: always
 
+nginx:
+        container_name: nginx
+        image: nginx
+        build: ./requirements/nginx
+        ports:
+            - "443:443"
+        networks:
+            - inception
+        volumes:
+            - wordpress_volume:/var/www/wordpress
+        depends_on:
+          - wordpress
+        restart: always
+
 
 volumes:
   mariadb_v:
