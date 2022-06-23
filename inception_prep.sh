@@ -10,14 +10,14 @@ sudo apt-get update
 sudo apt-get install docker-ce -y
 sudo apt-get update
 sudo apt-get install docker-compose-plugin -y
-if [ ! -d "/home/tblaase/data" ]; then \
+if ! -d "/home/tblaase/data" ; then \
 	mkdir /home/tblaase/data; \
-fi;
+fi
 
-if [ ! -d "/home/tblaase/data/wordpress" ]; then \
+if ! -d "/home/tblaase/data/wordpress" ; then \
 	mkdir /home/tblaase/data/wordpress; \
-fi;
+fi
 
-if [ ! -d "/home/tblaase/data/mariadb" ]; then \
+if ! -d "/home/tblaase/data/mariadb" ; then \
 	mkdir /home/tblaase/data/mariadb; \
-fi;
+fi
