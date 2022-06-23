@@ -15,6 +15,20 @@ services:
       - mariadb_v:/var/lib/mysql
     restart: always
 
+  wordpress:
+    container_name: wordpress
+    image: wordpress
+    build: /requirements/wordpress
+    networks:
+      - inception
+    volumes:
+      - wordpress_v:/var/www/wordpress
+    env_file: .env
+    depends _on:
+      - mariadb
+    restart: always
+
+
 volumes:
   mariadb_v:
     driver: local
@@ -22,3 +36,10 @@ volumes:
       type: none
       o: bind
       device: /home/tblaase/data/mariadb
+
+  wordpress_v:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/tblaase/data/wordpress
