@@ -1,16 +1,4 @@
 all:
-	@if [ ! -d "/home/tblaase/data" ]; then \
-	mkdir /home/tblaase/data; \
-	fi;
-
-	@if [ ! -d "/home/tblaase/data/wordpress" ]; then \
-	mkdir /home/tblaase/data/wordpress; \
-	fi;
-
-	@if [ ! -d "/home/tblaase/data/mariadb" ]; then \
-	mkdir /home/tblaase/data/mariadb; \
-	fi;
-
 	sudo docker compose -f ./srcs/docker-compose.yml up -d
 
 clean:
