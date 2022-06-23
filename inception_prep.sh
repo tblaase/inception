@@ -11,17 +11,17 @@ sudo apt-get update
 sudo apt-get install docker-ce -y
 sudo apt-get update
 sudo apt-get install docker-compose-plugin -y
-if [ -d "/home/$(USER)/data" ]; then \
-	echo "/home/$(USER)/data already exists"; else \
-	mkdir /home/$(USER)/data; \
+if [ -d "/home/$USER/data" ]; then \
+	echo "/home/$USER/data already exists"; else \
+	mkdir /home/$USER/data; \
 fi
 
-if [ -d "/home/$(USER)/data/wordpress" ]; then \
-	echo "/home/$(USER)/data/wordpress already exists"; else \
-	mkdir /home/$(USER)/data/wordpress; \
+if [ -d "/home/$USER/data/wordpress" ]; then \
+	echo "/home/$USER/data/wordpress already exists"; else \
+	mkdir /home/$USER/data/wordpress; \
 fi
 
-if [ -d "/home/$(USER)/data/mariadb" ]; then \
-	echo "/home/$(USER)/data/mariadb already exists"; else \
-	mkdir /home/$(USER)/data/mariadb; \
+if [ -d "/home/$USER/data/mariadb" ]; then \
+	echo "/home/$USER/data/mariadb already exists"; else \
+	mkdir /home/$USER/data/mariadb; \
 fi
