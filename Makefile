@@ -1,14 +1,14 @@
 all:
 	@if [ ! -d "/home/tblaase/data" ]; then \
-	mkdir /home/tblaase/data \
+	mkdir /home/tblaase/data; \
 	fi;
 
 	@if [ ! -d "/home/tblaase/data/wordpress" ]; then \
-	mkdir /home/tblaase/data/wordpress \
+	mkdir /home/tblaase/data/wordpress; \
 	fi;
 
 	@if [ ! -d "/home/tblaase/data/mariadb" ]; then \
-	mkdir /home/tblaase/data/mariadb \
+	mkdir /home/tblaase/data/mariadb; \
 	fi;
 
 	sudo docker compose -f ./srcs/docker-compose.yml up -d
@@ -19,11 +19,11 @@ clean:
 
 fclean: clean
 	@if [ ! -d "/home/tblaase/data/wordpress" ]; then \
-	sudo rm -rf /home/tblaase/data/wordpress/* \
+	sudo rm -rf /home/tblaase/data/wordpress/*; \
 	fi;
 
 	@if [ ! -d "/home/tblaase/data/mariadb" ]; then \
-	sudo rm -rf /home/tblaase/data/mariadb/* \
+	sudo rm -rf /home/tblaase/data/mariadb/*; \
 	fi;
 
 re: fclean all
