@@ -7,8 +7,9 @@
 # Unignore all dirs
 !*/
 
-# Unignore Makefile
+# Unignore Makefile && Dockerfile
 !Makefile
+!Dockerfile
 
 # Prerequisites
 *.d
@@ -69,7 +70,3 @@ dkms.conf
 # ignore .log
 *.log
 
-#ignore tester
-containers_test
-containers_test_repo
-tester_utils
