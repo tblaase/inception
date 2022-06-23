@@ -1,6 +1,6 @@
 #!/bin/bash
 #this will prep a new installation of a virtual machine for inception
-#the VM it is tested with is Ubuntu 22.04 LTS as minimal installation, a size of 20GB is reccomended
+#the VM it is tested with is Ubuntu 22.04 LTS 64 bit as minimal installation, a size of 20GB is reccomended
 sudo apt update
 sudo apt upgrade -y
 sudo apt install make curl lsb-release ca-certificates apt-transport-https software-properties-common -y
