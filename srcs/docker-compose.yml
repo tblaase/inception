@@ -18,7 +18,7 @@ services:
   wordpress:
     container_name: wordpress
     image: wordpress
-    build: /requirements/wordpress
+    build: ./requirements/wordpress
     networks:
       - inception
     volumes:
