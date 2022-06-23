@@ -24,7 +24,7 @@ services:
     volumes:
       - wordpress_v:/var/www/wordpress
     env_file: .env
-    depends _on:
+    depends_on:
       - mariadb
     restart: always
 
