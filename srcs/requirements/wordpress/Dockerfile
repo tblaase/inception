@@ -3,7 +3,6 @@ FROM debian:buster
 EXPOSE 9000
 
 RUN apt-get update && apt-get install -y \
-	apt-transport-https \
 	php7.3-fpm \
 	php7.3-mysql \
 	mariadb-client \
