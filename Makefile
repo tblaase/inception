@@ -1,5 +1,5 @@
 all:
-	sudo -i echo "127.0.0.1	tblaase.42.fr" >> /etc/hosts ; exit
+	sudo echo "127.0.0.1	tblaase.42.fr" >> /etc/hosts
 	sudo docker compose -f ./srcs/docker-compose.yml up -d
 
 clean:
