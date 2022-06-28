@@ -8,11 +8,11 @@ clean:
 #	sudo docker system prune -a
 
 fclean: clean
-	@if [ ! -d "/home/tblaase/data/wordpress" ]; then \
+	@if [ -d "/home/tblaase/data/wordpress" ]; then \
 	sudo rm -rf /home/tblaase/data/wordpress/*; \
 	fi;
 
-	@if [ ! -d "/home/tblaase/data/mariadb" ]; then \
+	@if [ -d "/home/tblaase/data/mariadb" ]; then \
 	sudo rm -rf /home/tblaase/data/mariadb/*; \
 	fi;
 
