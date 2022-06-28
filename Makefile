@@ -1,5 +1,5 @@
 all:
-	sudo hostsed add 127.0.0.1 tblaase.42.fr
+	@sudo hostsed add 127.0.0.1 tblaase.42.fr
 	sudo docker compose -f ./srcs/docker-compose.yml up -d
 
 clean:
