@@ -12,6 +12,8 @@ wp core install --title=$WP_TITLE \
 				--url=$WP_URL \
 				--allow-root
 
+define( 'WP_HOME' 'https://tblaase.42.fr' );
+
 wp user create $WP_USER $WP_USER_MAIL --role=author --user_pass=$WP_USER_PASSWORD --allow-root
 cd -
 
