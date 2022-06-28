@@ -3,7 +3,8 @@ all:
 
 clean:
 	sudo docker compose -f ./srcs/docker-compose.yml down --rmi all -v
-	sudo docker system prune -a
+#	uncomment the following line to remove the images too
+#	sudo docker system prune -a
 
 fclean: clean
 	@if [ ! -d "/home/tblaase/data/wordpress" ]; then \
