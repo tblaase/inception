@@ -21,3 +21,5 @@ re: fclean all
 ls:
 	sudo docker image ls
 	sudo docker ps
+
+.PHONY: all, clean, fclean, re, ls
