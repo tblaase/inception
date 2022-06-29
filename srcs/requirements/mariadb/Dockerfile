@@ -18,4 +18,7 @@ RUN service mysql start && \
 CMD ["mysqld_safe"]
 
 # test if you can connect to maridb database
-# docker exec -it mariadb mariadb --user tblaase -proot
+# sudo docker exec -it mariadb mariadb --user tblaase -proot
+# SHOW DATABASES;
+# USE wordpress;
+# SHOW TABLES
