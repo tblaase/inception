@@ -9,7 +9,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt-get update
 sudo apt-get install docker-ce -y
 sudo apt-get update
-sudo apt-get install docker-compose-plugin -y
+sudo apt-get install docker-compose -y
 if [ -d "/home/$USER/data" ]; then \
 	echo "/home/$USER/data already exists"; else \
 	mkdir /home/$USER/data; \
