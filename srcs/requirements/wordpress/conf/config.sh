@@ -13,7 +13,8 @@ wp core install --title=$WP_TITLE \
 				--allow-root
 
 wp user create $WP_USER $WP_USER_MAIL --role=author --user_pass=$WP_USER_PASSWORD --allow-root
+# wp flush privileges is needed here
 cd -
 
-# run php-fpm7.3 listening for CGI request and force to stay in foreground and ignore daemonize option fromm configuration file
+# run php-fpm7.3 listening for CGI request
 php-fpm7.3 -F
