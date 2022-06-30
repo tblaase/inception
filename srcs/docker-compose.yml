@@ -7,13 +7,13 @@ networks:
 services:
   mariadb:
     container_name: mariadb
+    env_file: .env
     image: mariadb
     build: ./requirements/mariadb
     networks:
       - inception
     volumes:
       - mariadb_v:/var/lib/mysql
-    env_file: .env
     restart: always
 
   wordpress:
