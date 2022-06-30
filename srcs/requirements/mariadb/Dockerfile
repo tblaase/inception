@@ -9,13 +9,13 @@ RUN apt-get update && apt-get install \
 
 RUN rm /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d
-# RUN pwd
-COPY tools/fill_sql.sh /
-RUN ./fill_sql.sh
 
-RUN service mysql start && \
-	mysql < create_db_user.sql && \
-	rm -rf create_db_user.sql
+COPY tools/create_user.sh /
+RUN ./create_user.sh
+
+# RUN service mysql start && \
+# 	mysql < create_db_user.sql && \
+RUN rm -rf create_user.sh
 
 CMD ["mysqld_safe"]
 
