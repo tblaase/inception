@@ -8,12 +8,17 @@ services:
   mariadb:
     container_name: mariadb
     image: mariadb
-    build: ./requirements/mariadb
+    build:
+      context: ./requirements/mariadb
+      args:
+        DB_NAME=${DB_NAME}
+        DB_USER=${DB_USER}
+        DB_PASSWORD=${DB_PASSWORD}
+        DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
     networks:
       - inception
     volumes:
       - mariadb_v:/var/lib/mysql
-    env_file: .env
     restart: always
 
   wordpress:
