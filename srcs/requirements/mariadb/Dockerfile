@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install \
 
 RUN rm /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d
+RUN bash tools/fill_sql.sh
 COPY tools/create_db_user.sql /
 
 RUN service mysql start && \

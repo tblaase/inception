@@ -1,8 +1,0 @@
-CREATE DATABASE wordpress;
-CREATE USER 'tblaase'@'%' IDENTIFIED BY 'root';
-GRANT ALL PRIVILEGES ON wordpress.* TO 'tblaase'@'%';
--- CREATE USER $WP_USER@'%' IDENTIFIED BY $WP_PASSWORD;
--- GRANT SHOW DATABASES ON wordpress.* TO $WP_USER@'%';
-FLUSH PRIVILEGES;
-
-ALTER USER 'root'@'localhost' IDENTIFIED BY '4242';
