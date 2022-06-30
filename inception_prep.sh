@@ -11,6 +11,7 @@ sudo apt-get install docker-ce -y
 sudo apt-get update
 sudo apt-get install docker-compose docker-compose-plugin -y
 sudo apt-get update
+sudo rm -rf /var/lib/apt/lists/*
 
 if [ -d "/home/$USER/data" ]; then \
 	echo "/home/$USER/data already exists"; else \
