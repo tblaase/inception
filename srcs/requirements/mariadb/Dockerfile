@@ -11,7 +11,7 @@ RUN rm /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d
 
 COPY tools/create_user.sh /
-RUN ./create_user.sh
+RUN bash ./create_user.sh
 
 # RUN service mysql start && \
 # 	mysql < create_db_user.sql && \
