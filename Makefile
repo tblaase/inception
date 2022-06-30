@@ -8,6 +8,7 @@ clean:
 #	sudo docker system prune -a
 
 fclean: clean
+	@sudo hostsed rm 127.0.0.1 tblaase.42.fr
 	@if [ -d "/home/tblaase/data/wordpress" ]; then \
 	sudo rm -rf /home/tblaase/data/wordpress/*; \
 	fi;
