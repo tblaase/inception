@@ -11,10 +11,10 @@ services:
     build:
       context: ./requirements/mariadb
       args:
-        DB_NAME=${DB_NAME}
-        DB_USER=${DB_USER}
-        DB_PASSWORD=${DB_PASSWORD}
-        DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+        - DB_NAME=${DB_NAME}
+        - DB_USER=${DB_USER}
+        - DB_PASSWORD=${DB_PASSWORD}
+        - DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
     networks:
       - inception
     volumes:
