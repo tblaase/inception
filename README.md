@@ -38,7 +38,10 @@ When you are at 42school and have limited space on your account, put the VM in g
 - clone this repo with `git clone https://github.com/tblaase/inception.git`
 - run the [setup scrip](https://github.com/tblaase/inception/blob/main/inception_prep.sh) from the root of the repo with `bash inception_prep.sh`
 - run `make` in the root of the repository
-- now type `https://tblaase.42.fr` (only if you used my configuration) or `https://yourintra.42.fr` (only if you configured it for your own name) in the browser of your VM and enjoy the beauty of a wordpress website with persistant storage
+- now type `https://tblaase.42.fr` (only if you used my configuration) or `https://yourintra.42.fr` (only if you configured it for your own name) in the browser of your VM and enjoy the beauty of a wordpress website with persistent storage
 - you might notice the browser complaining about an insecure connection, this is caused by the selfsigned ssl certificate the server uses, you can just ignore it for this project
 - all usernames and passwords can be changed from the [.env file](https://github.com/tblaase/inception/blob/main/srcs/.env)
 - to login to the wordpress-dashboard to change the apperance or the contents of the webpage go to `https://tblaase.42.fr/wp-admin` and use the WP credentials from the [.env file](https://github.com/tblaase/inception/blob/main/srcs/.env)
+- the server can be shutdowm by running `make clean` in the root of the repo
+- you can clean the persistent storage by running `make re` in the root of the repo
+- if you want the docker-images cleared too you need to uncomment line 8 in the [Makefile](https://github.com/tblaase/inception/blob/main/Makefile)
