@@ -36,7 +36,7 @@ When you are at 42school and have limited space on your account, put the VM in g
 - install `git` with `sudo apt install git` if not already installed
 - right now would be the appropriate point in time where you create a snapshot of your VM that can be used as a base
 - clone this repo with `git clone https://github.com/tblaase/inception.git`
-- run the setup scrip from the root of the repo with `bash inception_prep.sh`
+- run the [setup scrip](https://github.com/tblaase/inception/blob/main/inception_prep.sh) from the root of the repo with `bash inception_prep.sh`
 - run `make` in the root of the repository
 - now type `https://tblaase.42.fr` (only if you used my configuration) or `https://yourintra.42.fr` (only if you configured it for your own name) in the browser of your VM and enjoy the beauty of a wordpress website with persistant storage
 - you might notice the browser complaining about an insecure connection, this is caused by the selfsigned ssl certificate the server uses, you can just ignore it for this project
