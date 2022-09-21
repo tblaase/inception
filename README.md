@@ -31,7 +31,7 @@ When you are at 42school and have limited space on your account, put the VM in g
 - install [this(Ubuntu 22.04 64-bit)](https://ubuntu.com/download/desktop/thank-you?version=22.04&architecture=amd64) .iso on a the VM
 - i reccomend putting the window size of your virtual screen to 200%, it is easier this way to work with the VM
 - only run minimal installation
-- if you want to run my exact version, the username needs to be 'tblaase' otherwise put your own intra in there (if you change thee useername you should change it inside the [.env file](https://github.com/tblaase/inception/blob/main/srcs/.env) too
+- if you want to run my exact version, the username needs to be 'tblaase' otherwise put your own intra in there (if you change the username you should change it inside the [.env file](https://github.com/tblaase/inception/blob/main/srcs/.env) too
 - install all software updates
 - install `git` with `sudo apt install git` if not already installed
 - right now would be the appropriate point in time where you create a snapshot of your VM that can be used as a base
