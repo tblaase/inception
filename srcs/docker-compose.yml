@@ -19,7 +19,7 @@ services:
       - inception
     volumes:
       - mariadb_v:/var/lib/mysql
-    restart: always
+    restart: unless-stopped
 
   wordpress:
     container_name: wordpress
@@ -32,7 +32,7 @@ services:
     env_file: .env
     depends_on:
       - mariadb
-    restart: always
+    restart: unless-stopped
 
   nginx:
     container_name: nginx
@@ -47,7 +47,7 @@ services:
     depends_on:
       - wordpress
       - mariadb
-    restart: always
+    restart: unless-stopped
 
 
 volumes:
